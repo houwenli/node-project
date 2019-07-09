@@ -1,0 +1,19 @@
+create table images(
+    id int primary key auto_increment,
+    path varchar(100) not null,
+    type varchar(20) not null,
+    isrec int(10) not null,
+    time varchar(20) not null
+)DEFAULT CHARSET=utf8;
+
+create table comments(
+    id int primary key auto_increment,
+    imgId int(10) not null,
+    comment text not null
+)DEFAULT CHARSET=utf8;
+
+create table imageType(
+    id int primary key auto_increment,
+    imageType varchar(30) not null,
+    typeDesc text
+)DEFAULT CHARSET=utf8;
